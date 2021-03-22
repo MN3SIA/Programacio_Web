@@ -26,11 +26,11 @@
             
             if (empty($_POST["nom"] == false)) { // Si el nom
                 $nom = $_POST["nom"];
-                $missatge = '<p>Hola <strong>'.$nom.'</strong> usa este link para compartir tu archivo</p>';
+                $missatge = 'Hola <strong>'.$nom.'</strong>, usa este link para compartir tu archivo';
             }
             
             else {
-                $missatge = 'Oye tu!! Usa éste link para compartir tu archivo';
+                $missatge = '<p>Oye tu!! Usa éste link para compartir tu archivo</p>';
             }
                 
         }
@@ -39,14 +39,20 @@
         }
     
     ?>
-    <section class="row">
-        <div class="col- border">
-            <img src="images/successful.png" />
+    <main class="row container-fluid mt-5">
+        <div class="col-12 col-lg-4 text-center">
+            <img src="successful.png" />
         </div>
-        <div class="col border">
-            <?php echo $missatge ?>
+        <div class="row col-12 col-lg-8 mt-5 mt-lg-0">
+            <div class="col-12 d-flex justify-content-center align-items-end">
+                <p class="text-center h2"><?php echo $missatge ?></p>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                <a class="h4" href="<?php echo $rutaDestino ?>"><?php echo $rutaDestino ?></a>
+            </div>
         </div>
-    </section>
+    </main>
 </body>
 </html>
+
 
